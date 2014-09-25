@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UI Matter - Web UI Components Based on Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Web UI Components Based on Bootstrap">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="style/style.css" media="screen" />
+
+</head>
+<body>
+<div class="container">
+    <h1>UI Matter <small>Based on Bootstrap</small></h1>
+    <p class="lead">Bootstrap components are awesome but they're a starting point. That's why we've created new UI web components to solve some specific problems.</p>
+    <hr>
+</div>
+
+<div class="container">
+
+    <h3 id="no-items-found">No items found</h3>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <!-- HTML -->
+                    <div class="uim-no-items well text-muted text-center">
+                        <i class="fa fa-frown-o fa-5x"></i> 
+                        <p class="lead">No <strong>coupon</strong> found</p>
+                    </div>
+                    <!-- /HTML -->
+                </div>
+
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="text-success col-md-6">
+                            <h5><i class="fa fa-check"></i> Do</h5>
+                            When users search or filter from an array of content and nothing is found. Search results only.
+                        </div>
+                        <div class="text-danger col-md-6">
+                            <h5><i class="fa fa-ban"></i> Don't</h5>
+                            Don't use it when there's no itens created yet.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <script src="https://gist.github.com/rodrigomuniz/8288b5a3760db47b9b22.js"></script>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3 id="no-items-yet">No items yet</h3>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <!-- HTML -->
+                    <div class="uim-no-items well text-muted text-center">
+                        <i class="fa fa-frown-o fa-5x"></i> 
+                        <p class="lead">There's no <strong>coupon</strong> created yet</p>
+                        <a href="javascript:void(0)" class="btn btn-default btn-lg">Create new coupon</a>
+                    </div>
+                    <!-- /HTML -->
+                </div>
+
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="text-success col-md-6">
+                            <h5><i class="fa fa-check"></i> Do</h5>
+                            When users should see an array of content but there's no items created yet. Usually a new user or brand new application.
+                        </div>
+                        <div class="text-danger col-md-6">
+                            <h5><i class="fa fa-ban"></i> Don't</h5>
+                            Avoid using it to indicate zero search result.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <script src="https://gist.github.com/rodrigomuniz/f9f09b334256610c8475.js"></script>
+        </div>
+    </div>
+
+</div>
+<!-- TOPBAR -->
+<!--LIBS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!--/LIBS-->
+<!-- build:js /admin/speedbag/script/app.min.js -->
+<script type="text/javascript" src="/admin/speedbag/script/app.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>
