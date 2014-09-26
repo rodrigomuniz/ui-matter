@@ -8,23 +8,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
 
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat">
+
     <link rel="stylesheet" href="style/style.css" media="screen" />
 
 </head>
 <body>
-<div class="container">
-    <h1>UI Matter <small>Based on Bootstrap</small></h1>
-    <p class="lead">Bootstrap components are awesome but they're a starting point. That's why we've created new UI web components to solve some specific problems.</p>
-    <hr>
+
+<div class="hero">
+    <div class="container">
+        <header>
+        <h1>UI Matter <small>Based on Bootstrap 3</small></h1>
+        <h2>Bootstrap components are awesome but they're a starting point. That's why we've created new UI web components to solve some specific problems.</h2>
+    </header>
+    </div>
 </div>
 
+<div class="clipper"></div>
+
+<section class="content">
+
 <div class="container">
 
+    <section>        
     <h3 id="no-items-found">No items found</h3>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="panel panel-default">
                 <div class="panel-body">
+                    <h4>Preview</h4>
                     <!-- HTML -->
                     <div class="uim-no-items well text-muted text-center">
                         <i class="fa fa-frown-o fa-5x"></i> 
@@ -41,24 +54,27 @@
                         </div>
                         <div class="text-danger col-md-6">
                             <h5><i class="fa fa-ban"></i> Don't</h5>
-                            Don't use it when there's no itens created yet.
+                            Don't use it when for when there's no itens created yet.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <script src="https://gist.github.com/rodrigomuniz/8288b5a3760db47b9b22.js"></script>
         </div>
     </div>
+    </section>
 
     <hr>
 
+    <section>
     <h3 id="no-items-yet">No items yet</h3>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="panel panel-default">
                 <div class="panel-body">
+                    <h4>Preview</h4>
                     <!-- HTML -->
                     <div class="uim-no-items well text-muted text-center">
                         <i class="fa fa-frown-o fa-5x"></i> 
@@ -82,13 +98,211 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <script src="https://gist.github.com/rodrigomuniz/f9f09b334256610c8475.js"></script>
         </div>
     </div>
+    </section>
 
-</div>
-<!-- TOPBAR -->
+    <hr>
+
+    <section>
+    <h3 id="search-filters">Search and Filters</h3>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>Preview</h4>
+                    <!-- HTML -->
+
+                    <form class="uim-search-filter">
+                        <input type="text" placeholder="Search by Name, Description or Sales Channel" class="form-control input-lg">
+
+                        <div class="uim-btn-filter dropdown">
+                            <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+                                <span class="uim-filter-count badge">0</span>
+                                <i class="fa fa-filter"></i>&nbsp;
+                                <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Status</li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox"> Actives</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox"> Inactives</label>
+                                        </a>
+                                    </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Kind</li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox"> Regular</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox"> Special</label>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clear input and filters -->
+                        <div class="uim-btn-clear-query hide">
+                            <button type="btn" class="btn btn-default uim-filter-clear">
+                                <i class="fa fa-remove"></i>
+                            </button>
+                        </div>
+
+                        <div class="uim-active-filters hide">
+                            <span class="label label-primary">
+                                Actives 
+                                <a href="javascript:void(0);"><i class="fa fa-times-circle"></i></a>
+                            </span>
+                            <span class="label label-primary">
+                                Special 
+                                <a href="javascript:void(0);"><i class="fa fa-times-circle"></i></a>
+                            </span>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <h4>Actived filters</h4>
+                    <!-- Filled Variation -->
+                    <p class="text-info">Using JavaScript, you'll need to prevent the dropdown menu from closing when users active any of the filters from the dropdown menu. Also you should apply the <code>.uim-filter-checked</code> class to <code>.uim-btn-filter</code> and remove the <code>.hide</code> class from <code>.uim-btn-clear-query</code> and <code>.uim-active-filters</code></p>
+                    <form class="uim-search-filter">
+                        <input type="text" placeholder="Search by Name, Description or Sales Channel" class="form-control input-lg">
+
+                        <div class="uim-btn-filter uim-filter-checked dropdown">
+                            <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+                                <span class="uim-filter-count badge">2</span>
+                                <i class="fa fa-filter"></i>&nbsp;
+                                <span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Status</li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox" checked> Actives</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox"> Inactives</label>
+                                        </a>
+                                    </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Kind</li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox"> Regular</label>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">
+                                            <label class="checkbox"><input type="checkbox" checked> Special</label>
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clear input and filters -->
+                        <div class="uim-btn-clear-query">
+                            <button type="btn" class="btn btn-default uim-filter-clear">
+                                <i class="fa fa-remove"></i>
+                            </button>
+                        </div>
+
+                        <div class="uim-active-filters">
+                            <span class="label label-primary">
+                                Actives 
+                                <a href="javascript:void(0);"><i class="fa fa-times-circle"></i></a>
+                            </span>
+                            <span class="label label-primary">
+                                Special 
+                                <a href="javascript:void(0);"><i class="fa fa-times-circle"></i></a>
+                            </span>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <h4>No filters</h4>
+                    <p class="text-info">A variation without filters can be easily achieved using the <code>.uim-search-no-filter</code> class in the <code>form</code>.</p>
+                    <form class="uim-search-filter uim-search-no-filter">
+                        <input type="text" placeholder="Search by Name, Description or Sales Channel" class="form-control input-lg" value="user's query">
+
+                        <!-- Clear input and filters -->
+                        <div class="uim-btn-clear-query">
+                            <button type="btn" class="btn btn-default uim-filter-clear">
+                                <i class="fa fa-remove"></i>
+                            </button>
+                        </div>
+
+                    </form>
+                    <!-- /HTML -->
+                </div>
+
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="text-success col-md-6">
+                            <h5><i class="fa fa-check"></i> Do</h5>
+                            When users need to search or/and filter from an array of content.
+                        </div>
+                        <div class="text-danger col-md-6">
+                            <h5><i class="fa fa-ban"></i> Don't</h5>
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <script src="https://gist.github.com/rodrigomuniz/a2bd40fcc14044db4295.js"></script>
+        </div>
+    </div>
+    </section>
+
+
+
+</div><!-- /container -->
+</section><!-- /content -->
+
+<div class="clipper-footer"></div>
+
+  <footer>
+    <div class="container">
+          <div class="pull-left">
+            <a href="http://lab.vtex.com.br" title="Designed and maintained by VTEX Lab and contributors">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="32" height="32" xml:space="preserve" viewbox="0 0 100 100" class="logo">
+              <circle cx="50" cy="49" r="44" class="circle"/>
+              <polygon points="59.9 28.3 75.5 28.3 50 81.6 42.2 65.2" class="polygon v-bigger"/>
+              <polygon points="39.7 60.1 24.5 28.2 40.1 28.2 47.6 43.7" class="polygon"/>
+            </svg>
+            </a>
+          </div><!-- logo -->
+
+          <div class="pull-left">
+            <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1403226798.html#_=1403800489144&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=vtexlab&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 237px; height: 20px;"></iframe>
+          </div><!-- twitter -->
+
+          <div class="pull-left">
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a> and documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+          </div><!-- license -->
+
+          <div class="pull-right">
+            <a href="http://vtex.github.io/tortin">Get <strong>Tortin</strong> Theme</a>
+          </div><!-- please? -->
+    </div>
+  </footer>
+
 <!--LIBS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
