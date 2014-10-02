@@ -1,4 +1,3 @@
-ui-matter
+MOVED TO https://github.com/vtex/ui-matter 
 =========
 
-Custom Web UI Components based on Bootstrap
